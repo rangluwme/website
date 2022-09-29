@@ -72,11 +72,20 @@ opera.postError == 'function' && console.profile.length > 0)) {
 </head>
 
 <body class="page-body" style="position: absolute; left: 15%; width: 70%;">
+    <div style="text-align: center;margin-top: 20px;">
+        <a href="https://time.is/shanghai" id="time_is_link" ></a>
+
+        <span id="China_Standard_Time_z429" style="text-align: center;font-size:40px"></span>
+        <script src="assets/js/t.js"></script>
+        <script >time_is_widget.init({China_Standard_Time_z429:{}});</script>
+    </div>
+
     <!-- skin-white -->
     <div class="page-container">
         <div class="main-content" > 
             <!-- 财经新闻 -->
-            <h4 class="text-gray"><i class="linecons-tag" style="margin-right: 7px;" id="news-financial-1-1"></i>财经新闻</h4>
+            <h4 class="text-gray"><i class="linecons-tag" style="margin-right: 7px;" id="news-financial-1-1"></i>
+                <a href="/clock.html">财经新闻</a></h4>
             <div class="row">
                 <div class="col-sm-3">
                     <div class="xe-widget xe-conversations box2 label-info"
