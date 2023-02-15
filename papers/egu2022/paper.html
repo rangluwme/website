@@ -1,0 +1,235 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<head>
+<title>Paper</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+<meta name="renderer" content="webkit">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+<meta name="format-detection" content="telephone=no">
+<meta name="robots" content="index, follow">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript">
+  //禁用右键（防止右键查看源代码） 
+  window.oncontextmenu = function () { return false; }
+  //禁止任何键盘敲击事件（防止F12和shift+ctrl+i调起开发者工具） 
+  window.onkeydown = window.onkeyup = window.onkeypress = function () {
+      window.event.returnValue = false;
+      return false;
+  }
+  //如果用户在工具栏调起开发者工具，那么判断浏览器的可视高度和可视宽度是否有改变，如有改变则关闭本页面 
+  var h = window.innerHeight, w = window.innerWidth;
+  window.onresize = function () {
+      if (h != window.innerHeight || w != window.innerWidth) {
+          window.close();
+          window.location = "about:blank";
+      }
+  }
+</script>
+<script>
+  function fuckyou() {
+      window.close(); //关闭当前窗口(防抽)
+      window.location = "about:blank"; //将当前窗口跳转置空白页
+  }
+  function ck() {
+      console.profile();
+      console.profileEnd();
+      //我们判断一下profiles里面有没有东西，如果有，肯定有人按F12了，没错！！
+      if (console.clear) { console.clear() };
+      if (typeof console.profiles == "object") {
+          return console.profiles.length > 0;
+      }
+  }
+  function hehe() {
+      if ((window.console && (console.firebug || console.table && /firebug/i.test(console.table()))) || (typeof opera == 'object' && typeof 
+
+opera.postError == 'function' && console.profile.length > 0)) {
+          fuckyou();
+      }
+      if (typeof console.profiles == "object" && console.profiles.length > 0) {
+          fuckyou();
+      }
+  }
+  hehe();
+  window.onresize = function () {
+      if ((window.outerHeight - window.innerHeight) > 200)
+          //判断当前窗口内页高度和窗口高度，如果差值大于200，那么呵呵
+          fuckyou();
+  }
+</script>
+  <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+  <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="shortcut icon" href="/favicon.ico">
+<link rel="stylesheet" href="./files/style.css">
+<link rel="stylesheet" href="./files/font.css">
+<style type="text/css">
+  /* 最简单的实现禁止复制的方法，采用css方式禁止文字选择，当然这只兼容webkit内核浏览器 */
+  * { -webkit-user-select: none; }
+
+  input {width: 80%; padding: 10px 20px;}
+  </style>
+ 
+  <script type="text/javascript">
+  // 禁止右键菜单
+  document.oncontextmenu = function(){ return false; };
+  // 禁止文字选择
+  document.onselectstart = function(){ return false; };
+  // 禁止复制
+  document.oncopy = function(){ return false; };
+  // 禁止剪切
+  document.oncut = function(){ return false; };
+  // 禁止粘贴
+  document.onpaste = function(){ return false; };
+  </script>
+  
+<style type="text/css">
+  #myvalignContainer1O { position:relative }
+  #myvalignContainer1I { position:absolute; top:50%; height:10em; margin-top:-5em }
+</style><style type="text/css">
+  #myvalignContainer2 { line-height:4em }
+</style>
+
+
+</head>
+
+
+<body>
+
+
+<!-- Title -->
+<div class="container">
+
+<span class="title">A Review of Irrigation in the Lower Mekong Basin: Opportunities
+  and Challenges from a Water-Food-Energy Nexus Perspective</span>
+
+<table align="center" border="0" width="1000" class="authors">
+  <tbody><tr>
+  <td class="author"> Guanghui Wang,          Tingju Zhu</td>
+  
+  </tr></tbody>
+</table>
+
+<br>
+<table align="center" border="0" width="1000" class="affiliations">
+<tbody>
+  <tr>
+    <td class="affliation" align="center">
+      <a href="https://zjui.intl.zju.edu.cn">ZJU-UIUC Institute, International Campus, Zhejiang University, Haining, Zhejiang, China</a><br>
+      <a href="https://cee.illinois.edu/">Department of Civil and Environmental Engineering, University of Illinois at Urbana-Champaign, Urbana, USA</a>      
+      <a href="https://meetingorganizer.copernicus.org/EGU22/EGU22-8202.html">https://meetingorganizer.copernicus.org/EGU22/EGU22-8202.html</a>
+    </td>
+  </tr>
+</tbody>
+</table>
+<br>
+<br>
+<center>
+  <!-- <img src="files/rmdp_intro.png" width="500">
+	<img src="files/rmdp_eg.png" width="450"> -->
+</center>
+
+<!-- Abstract -->
+<div class="section">
+<span class="section-title">Abstract </span>
+<p style="text-align:justify;"> 
+  Agriculture is essential for economic growth in the Lower Mekong River basin (LMB), which plays a
+  key role in ensuing water and food security of the riparian regions and provides livelihoods for
+  tens of millions of people. Agricultural irrigation, hydropower development, increasing water
+  demand from other sectors, and ecosystem protection necessitate taking a holistic approach
+  when analyzing irrigation in the LMB. This paper examines the existing problems and
+  opportunities of irrigation in the LMB from the angle of water-food-energy (WFE) nexus. We
+  selected journal articles from the Web of Science database and imported them into CiteSpace, a
+  bibliometric analysis software for visual exploration of scientific literature. The visualized results
+  summarize the significance of authors and their affiliations in the selected body of literature, and
+  the country-wise distribution. Four key research themes of LMB irrigation were identified based on
+  the bibliometric analysis, for conducting an in-depth review. First, we investigated the factors that
+  influence agricultural water management which directly affects irrigation water demand and
+  supply as well as crop productivity. This part of the literature focused on water and land
+  management and applications of various models to assess impacts on crop yields of irrigation
+  management. Second, from the literature we analyzed the identified impacts of human flow
+  alternations on downstream water uses, ecosystem health, and land subsidence due to
+  groundwater overdraft. Nevertheless, upstream water management can mitigate downstream
+  flood damages and augment dry-season water supply. Third, the spatiotemporal mismatch
+  between water demand and supply pose a serious challenge for transboundary river basin
+  management. Moreover, inappropriate water utilization, mismanagement and poor governance
+  appear to be the more fundamental causes of the LMB water problems, thus calling for sound
+  agricultural water policies within a riparian country and effective water management cooperation
+  strategies across the riparian countries. Fourth, despite of the relatively few publications on the
+  Mekong’s WFE nexus so far, this particular topic is gaining growing attention in the Mekong basin
+  research community. Moreover, it offers a valuable holistic perspective for analyzing irrigation in
+  the LMB, by considering its connections with the food and energy sectors in one way or another,
+  compared against many existing studies that view irrigation as solely an agricultural water
+  management problem.
+  </p>
+</div>
+ 
+<div class="section">
+<span class="section-title">Paper</span>
+<p>
+You can download full preprint <a href='./egu2022.pdf'>here</a>.
+</p>
+</div>
+
+<!-- <div class="section">
+<span class="section-title">
+
+
+</span>
+
+
+<div class="panel-group" id="accordion">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" 
+           href="#collapseOne">
+          (1) Health gathering in VizDoom platform
+        </a>
+      </h4>
+    </div>
+    <div id="collapseOne" class="panel-collapse collapse">
+      <div class="panel-body">
+        <img src="files/rmdp_hg.png" width="500">
+      </div>
+    </div>
+  </div>
+
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" 
+           href="#collapseTwo">
+          (2) Collecting keys in maze environment
+        </a>
+      </h4>
+    </div>
+    <div id="collapseTwo" class="panel-collapse collapse">
+      <div class="panel-body">
+        <img src="files/rmdp_eg.png" width="500">
+      </div>
+    </div>
+  </div>
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" 
+           href="#collapseThree">
+          (3) VizDoom AI Competition 2017 Track2
+        </a>
+      </h4>
+    </div>
+    <div id="collapseThree" class="panel-collapse collapse">
+      <div class="panel-body">
+        <img src="files/viz2017.png" width="500">
+      </div>
+    </div>
+  </div> -->
+  
+</div>
+
+</div>
+
+</td></tr></tbody></table></div></body></html>
