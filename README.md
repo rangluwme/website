@@ -46,17 +46,7 @@ parsers:
 > ^((?!A).)*$     节点名不含有 A  
 >
 > (?!.*(A)).*(B)  节点名不含有 A，同时含有 B
-```
-    - https://east.lele233.pro/dns-query
-    - https://east.lele233.pro/cdn
-    - https://hk.lele233.cn:2333/dns-query
-    - https://cn-east.iqiqzz.com/dns-query
-    - https://cn-east.iqiqzz.com/cdn
-    - https://cn-south.iqiqzz.com/dns-query
-    - https://cn-south.iqiqzz.com/cdn
-    - https://south.lele233.pro/dns-query
-    - https://south.lele233.pro/cdn
-```
+
 ```yaml
 mixin: # Mixin 配置文件
   tun:
