@@ -79,11 +79,11 @@ mixin: # Mixin 配置文件
       - https://east.lele233.pro/cdn
       - https://south.lele233.pro/dns-query
       - https://south.lele233.pro/cdn
+      - https://hk.lele233.cn:2333/dns-query
       - https://cn-east.iqiqzz.com/dns-query
       - https://cn-east.iqiqzz.com/cdn
       - https://cn-south.iqiqzz.com/dns-query
       - https://cn-south.iqiqzz.com/cdn
-      - https://hk.lele233.cn:2333/dns-query
       # - https://cloudflare-dns.com/dns-query
       # - https://dns.google/dns-query
     fallback-filter: #开启之后，fallback才会生效，符合条件的IP会使用fallback解析，实际测试下来速度会很慢，此时可以把nameserver里面的DNS放到fallback里面
@@ -96,15 +96,5 @@ mixin: # Mixin 配置文件
          - 0.0.0.0/32
          - 127.0.0.1/32
     fake-ip-filter:
-      - +.stun.*.*
-      - +.stun.*.*.*
-      - +.stun.*.*.*.*
-      - +.stun.*.*.*.*.*
-      - "*.n.n.srv.nintendo.net"
-      - +.stun.playstation.net
-      - xbox.*.*.microsoft.com
-      - "*.*.xboxlive.com"
-      - "*.msftncsi.com"
-      - "*.msftconnecttest.com"
-      - WORKGROUP
+      - www.msftconnecttest.com 
 ```
