@@ -95,4 +95,16 @@ mixin: # Mixin 配置文件
          - 240.0.0.0/4
          - 0.0.0.0/32
          - 127.0.0.1/32
+    fake-ip-filter:
+      - +.stun.*.*
+      - +.stun.*.*.*
+      - +.stun.*.*.*.*
+      - +.stun.*.*.*.*.*
+      - "*.n.n.srv.nintendo.net"
+      - +.stun.playstation.net
+      - xbox.*.*.microsoft.com
+      - "*.*.xboxlive.com"
+      - "*.msftncsi.com"
+      - "*.msftconnecttest.com"
+      - WORKGROUP
 ```
