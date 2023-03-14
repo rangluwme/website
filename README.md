@@ -1,30 +1,48 @@
 https://mayiyun.club/api/v1/client/subscribe?token=66c1e2b9cd66cc81c42ca58a025b4b95
 
-
 https://v1.efshop.cc/api/v1/client/subscribe?token=9fb0efd38f431ef64ff9435507307fb7
-
-
-tg://socks?server=127.0.0.1&port=1080&remarks=ZJU Connect
-
 
 &config=https%3A%2F%2Fraw.githubusercontent.com%2Frangluwme%2Frule%2Fmain%2Fclash.ini
 
 ```
 parsers:
-  - url: https://sub.xeton.dev/sub?target=clash&new_name=true&url=https%3A%2F%2Fmayiyun.club%2Fapi%2Fv1%2Fclient%2Fsubscribe%3Ftoken%3D66c1e2b9cd66cc81c42ca58a025b4b95%7Chttps%3A%2F%2Fv1.efshop.cc%2Fapi%2Fv1%2Fclient%2Fsubscribe%3Ftoken%3D9fb0efd38f431ef64ff9435507307fb7&insert=false&config=https%3A%2F%2Fraw.githubusercontent.com%2Frangluwme%2Frule%2Fmain%2Fclash.ini
+parsers:
+  - url: https://sub.xeton.dev/sub?target=clash&url=https%3A%2F%2Fmayiyun.club%2Fapi%2Fv1%2Fclient%2Fsubscribe%3Ftoken%3D66c1e2b9cd66cc81c42ca58a025b4b95%7Chttps%3A%2F%2Fv1.efshop.cc%2Fapi%2Fv1%2Fclient%2Fsubscribe%3Ftoken%3D9fb0efd38f431ef64ff9435507307fb7&config=https%3A%2F%2Fraw.githubusercontent.com%2Frangluwme%2Frule%2Fmain%2Fclash.ini
     yaml:
       prepend-rules:
-        - DOMAIN-KEYWORD,steamdownload,REJECT # rules最前面增加一个规则
         - DOMAIN-KEYWORD,logitechg,REJECT
         - DOMAIN-KEYWORD,weibo,REJECT # rules最前面增加一个规则
         - DOMAIN-KEYWORD,v2ex,REJECT
         - DOMAIN-KEYWORD,cc98,REJECT
         - DOMAIN-KEYWORD,rangluw,REJECT
-      # append-proxies:
-      #   - name: test # proxies最后面增加一个服务
-      #     type: http
-      #     server: 123.123.123.123
-      #     port: 456
+        - DOMAIN-KEYWORD,analytics,REJECT
+        - DOMAIN-KEYWORD,adservice,REJECT
+        - DOMAIN-KEYWORD,youtube,REJECT
+        - DOMAIN-KEYWORD,googlevideo,REJECT
+        - DOMAIN-SUFFIX,ytimg.com,REJECT
+        - DOMAIN-SUFFIX,t.me,REJECT
+        - DOMAIN-SUFFIX,tdesktop.com,REJECT
+        - DOMAIN-SUFFIX,telegra.ph,REJECT
+        - DOMAIN-SUFFIX,telegram.me,REJECT
+        - DOMAIN-SUFFIX,telegram.org,REJECT
+        - DOMAIN-SUFFIX,telesco.pe,REJECT
+        - IP-CIDR,91.108.0.0/16,REJECT
+        - IP-CIDR,109.239.140.0/24,REJECT
+        - IP-CIDR,149.154.160.0/20,REJECT
+        - IP-CIDR6,2001:67c:4e8::/48,REJECT
+        - IP-CIDR6,2001:b28:f23d::/48,REJECT
+        - IP-CIDR6,2001:b28:f23f::/48,REJECT
+      append-proxies:
+        - name: ZJU # proxies最后面增加一个服务
+          type: socks5
+          server: 127.0.0.1
+          port: 1080
+      prepend-proxy-groups:
+        - name: 🏫 ZJUWLAN
+          type: select
+          proxies:
+            - DIRECT
+            - ZJU
 
 ```
 
