@@ -11,7 +11,7 @@ https://sub.xeton.dev/sub?target=clash&url=https%3A%2F%2Fv1.efshop.cc%2Fapi%2Fv1
 - [Parser_ZJU](#parser_zju)
 - [Mixin](#mixin)
 - [Code](#code)
-
+- [DNS](#dns)
 # Parser
 ```
 parsers: # array
@@ -337,3 +337,15 @@ mixin: # Mixin 配置文件
 - https://www.google.com/search?q=%s&hl=zh_CN
 - https://www.google.com/?hl=zh_CN
 - https://www.google.com/?lr=lang_zh-CN
+# DNS
+```
+https://cn-east.iqiqzz.com/dns-query
+https://cn-east.iqiqzz.com/cdn
+https://cn-south.iqiqzz.com/dns-query
+https://cn-south.iqiqzz.com/cdn
+https://east.lele233.pro/dns-query
+https://east.lele233.pro/cdn
+https://south.lele233.pro/dns-query
+https://south.lele233.pro/cdn
+https://hk.lele233.cn:2333/dns-query
+```
