@@ -45,10 +45,9 @@ parsers: # array
           url: http://www.apple.com/library/test/success.html
           interval: 10
         - name: 🇨🇳 台湾 
-          type: select
-          # type: url-test
-          # url: http://www.apple.com/library/test/success.html
-          # interval: 10
+          type: url-test
+          url: http://www.apple.com/library/test/success.html
+          interval: 10
         - name: 🇸🇬 新加坡 
           type: url-test
           url: http://www.apple.com/library/test/success.html
@@ -255,10 +254,10 @@ parsers: # array
           url: http://www.apple.com/library/test/success.html
           interval: 10
         - name: 🇨🇳 台湾 
-          type: select
-          # type: url-test
-          # url: http://www.apple.com/library/test/success.html
-          # interval: 10
+          # type: select
+          type: url-test
+          url: http://www.apple.com/library/test/success.html
+          interval: 10
         - name: 🇸🇬 新加坡 
           type: url-test
           url: http://www.apple.com/library/test/success.html
