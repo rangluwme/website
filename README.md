@@ -26,18 +26,16 @@ parsers: # array
       } 
     yaml:
       prepend-rules:
+        - DOMAIN-SUFFIX,ytimg.com,REJECT
         - RULE-SET,BanAD,REJECT
         - RULE-SET,BanProgramAD,REJECT
         - RULE-SET,reject,REJECT
-
         - RULE-SET,zju,DIRECT
         - RULE-SET,proxylist,💥 Proxy Network
-        
         - RULE-SET,Microsoft,DIRECT
         - RULE-SET,direct,DIRECT
         - RULE-SET,cncidr,DIRECT
         - RULE-SET,directlist,DIRECT
-
         - RULE-SET,ProxyLite,💥 Proxy Network
         - RULE-SET,ProxyGFWlist,💥 Proxy Network
         - GEOIP,CN,DIRECT
@@ -48,23 +46,36 @@ parsers: # array
           proxies:
           - 🇭🇰 香港
           - 🇨🇳 台湾
-          - 🇸🇬 新加坡       
+          - 🇸🇬 新加坡
+          - 🇯🇵 日本
+          - 🇰🇷 韩国     
         - name: 🇭🇰 香港 
           type: url-test
           url: http://www.apple.com/library/test/success.html
-          interval: 100
+          interval: 10
         - name: 🇨🇳 台湾 
-          type: url-test
-          url: http://www.apple.com/library/test/success.html
-          interval: 100
+          type: select
+          # type: url-test
+          # url: http://www.apple.com/library/test/success.html
+          # interval: 10
         - name: 🇸🇬 新加坡 
           type: url-test
           url: http://www.apple.com/library/test/success.html
-          interval: 100
+          interval: 10
+        - name: 🇯🇵 日本
+          type: url-test
+          url: http://www.apple.com/library/test/success.html
+          interval: 10
+        - name: 🇰🇷 韩国
+          type: url-test
+          url: http://www.apple.com/library/test/success.html
+          interval: 10
       commands:
         - proxy-groups.🇭🇰 香港.proxies=[]proxyNames|香港 
         - proxy-groups.🇨🇳 台湾.proxies=[]proxyNames|台
         - proxy-groups.🇸🇬 新加坡.proxies=[]proxyNames|新加坡
+        - proxy-groups.🇯🇵 日本.proxies=[]proxyNames|日
+        - proxy-groups.🇰🇷 韩国.proxies=[]proxyNames|韩
       mix-rule-providers: 
         directlist: 
           type: http
