@@ -18,7 +18,6 @@ parsers: # array
       } 
     yaml:
       prepend-rules:
-        - DOMAIN-SUFFIX,ytimg.com,REJECT
         - RULE-SET,BanAD,REJECT
         - RULE-SET,BanProgramAD,REJECT
         - RULE-SET,reject,REJECT
