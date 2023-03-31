@@ -170,6 +170,21 @@ parsers: # array
           - ZJU
 ```
 
+# REJECT
+```
+        - DOMAIN-KEYWORD,logitechg,REJECT
+        - DOMAIN-KEYWORD,analytics,REJECT 
+        - DOMAIN-KEYWORD,adservice,REJECT
+        - DOMAIN-SUFFIX,rangluw.pages.dev,REJECT
+        - DOMAIN-KEYWORD,weibo,REJECT
+        - DOMAIN-KEYWORD,sinaimg,REJECT
+        - DOMAIN-KEYWORD,v2ex,REJECT
+        - DOMAIN-KEYWORD,cc98,REJECT
+        - DOMAIN-KEYWORD,rangluw,REJECT
+        - DOMAIN-KEYWORD,youtube,REJECT
+        - DOMAIN-KEYWORD,googlevideo,REJECT
+        - DOMAIN-SUFFIX,ytimg.com,REJECT
+```
 # Mixin
 ```
 mixin: # Mixin 配置文件
@@ -218,21 +233,6 @@ mixin: # Mixin 配置文件
          - 127.0.0.1/32
 ```
 
-# REJECT
-```
-        - DOMAIN-KEYWORD,logitechg,REJECT
-        - DOMAIN-KEYWORD,analytics,REJECT 
-        - DOMAIN-KEYWORD,adservice,REJECT
-        - DOMAIN-SUFFIX,rangluw.pages.dev,REJECT
-        - DOMAIN-KEYWORD,weibo,REJECT
-        - DOMAIN-KEYWORD,sinaimg,REJECT
-        - DOMAIN-KEYWORD,v2ex,REJECT
-        - DOMAIN-KEYWORD,cc98,REJECT
-        - DOMAIN-KEYWORD,rangluw,REJECT
-        - DOMAIN-KEYWORD,youtube,REJECT
-        - DOMAIN-KEYWORD,googlevideo,REJECT
-        - DOMAIN-SUFFIX,ytimg.com,REJECT
-```
 # Code
 - https://github.com/Mythologyli/ZJU-Rule/tree/master/Clash/Providers
 ---
