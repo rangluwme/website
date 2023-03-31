@@ -224,75 +224,73 @@ parsers: # array
         - DOMAIN-KEYWORD,youtube,REJECT
         - DOMAIN-KEYWORD,googlevideo,REJECT
         - DOMAIN-SUFFIX,ytimg.com,REJECT
+        
         - RULE-SET,BanAD,REJECT
         - RULE-SET,BanProgramAD,REJECT
+        - RULE-SET,BanEasyListChina,REJECT
+        - RULE-SET,BanEasyList,REJECT
+        - RULE-SET,BanEasyPrivacy,REJECT
         - RULE-SET,reject,REJECT
 
         - RULE-SET,zju,DIRECT
-        - RULE-SET,proxylist,💥 Proxy Network
+        - RULE-SET,proxylist,💥 Proxy Mode
         
         - RULE-SET,Microsoft,DIRECT
         - RULE-SET,direct,DIRECT
         - RULE-SET,cncidr,DIRECT
         - RULE-SET,directlist,DIRECT
 
-        - RULE-SET,ProxyLite,💥 Proxy Network
-        - RULE-SET,ProxyGFWlist,💥 Proxy Network
+        - RULE-SET,ProxyLite,💥 Proxy Mode
+        - RULE-SET,ProxyGFWlist,💥 Proxy Mode
         - GEOIP,CN,DIRECT
-        - MATCH,💥 Proxy Network
+        - MATCH,💥 Proxy Mode
       prepend-proxy-groups:
-        - name: 💥 Proxy Network
+        - name: 💥 Proxy Mode
           type: select
           proxies:
           - 🇭🇰 香港
           - 🇨🇳 台湾
           - 🇸🇬 新加坡
-          - 🇯🇵 日本
-          - 🇰🇷 韩国     
-        - name: 🇭🇰 香港 
+          - 🌍 Proxy Network 
+        - name: 🇭🇰 香港
           type: url-test
           url: http://www.apple.com/library/test/success.html
           interval: 10
         - name: 🇨🇳 台湾 
-          # type: select
-          type: url-test
-          url: http://www.apple.com/library/test/success.html
-          interval: 10
+          type: select
+          # type: url-test
+          # url: http://www.apple.com/library/test/success.html
+          # interval: 10
         - name: 🇸🇬 新加坡 
           type: url-test
           url: http://www.apple.com/library/test/success.html
           interval: 10
-        - name: 🇯🇵 日本
-          type: url-test
-          url: http://www.apple.com/library/test/success.html
-          interval: 10
-        - name: 🇰🇷 韩国
+        - name: 🌍 Proxy Network
           type: url-test
           url: http://www.apple.com/library/test/success.html
           interval: 10
       commands:
-        - proxy-groups.🇭🇰 香港.proxies=[]proxyNames|香港 
-        - proxy-groups.🇨🇳 台湾.proxies=[]proxyNames|台
-        - proxy-groups.🇸🇬 新加坡.proxies=[]proxyNames|新加坡
-        - proxy-groups.🇯🇵 日本.proxies=[]proxyNames|日
-        - proxy-groups.🇰🇷 韩国.proxies=[]proxyNames|韩
+        - proxy-groups.🇭🇰 香港.proxies=[]proxyNames|港|HK
+        - proxy-groups.🇨🇳 台湾.proxies=[]proxyNames|台|TW
+        - proxy-groups.🇸🇬 新加坡.proxies=[]proxyNames|新|狮城|SG
+        - proxy-groups.🌍 Proxy Network.proxies=[]proxyNames|日|韩|美|US|KR|JP
       mix-rule-providers: 
         directlist: 
           type: http
           behavior: classical
-          url: "https://cdn.jsdelivr.net/gh/rangluwme/rule/directlist.yaml"
+          url: "https://raw.githubusercontent.com/rangluwme/rule/main/directlist.yaml"
           path: ./ruleset/directlist.yaml
           interval: 86400
-        zju: 
+        zju:
           type: http
           behavior: classical
-          url: "https://cdn.jsdelivr.net/gh/rangluwme/rule/zju.yaml"
+          url: "https://raw.githubusercontent.com/rangluwme/rule/main/zju.yaml"
           path: ./ruleset/zju.yaml
           interval: 86400
         proxylist: 
           type: http
           behavior: classical
-          url: "https://cdn.jsdelivr.net/gh/rangluwme/rule/proxylist.yaml"
+          url: "https://raw.githubusercontent.com/rangluwme/rule/main/proxylist.yaml"
           path: ./ruleset/proxylist.yaml
           interval: 86400
         reject: # 广告域名列表
@@ -318,31 +316,49 @@ parsers: # array
           type: http
           url: "https://cdn.jsdelivr.net/gh/Mythologyli/ZJU-Rule/Clash/Providers/BanAD.yaml"
           interval: 86400
-          path: ./ACL4SSR/BanAD.yaml
+          path: ./ruleset/BanAD.yaml
         BanProgramAD:
           behavior: classical 
           type: http
           url: "https://cdn.jsdelivr.net/gh/Mythologyli/ZJU-Rule/Clash/Providers/BanProgramAD.yaml"
           interval: 86400
-          path: ./ACL4SSR/BanProgramAD.yaml
+          path: ./ruleset/BanProgramAD.yaml
+        BanEasyList:
+          behavior: classical 
+          type: http
+          url: "https://cdn.jsdelivr.net/gh/Mythologyli/ZJU-Rule/Clash/Providers/BanEasyList.yaml"
+          interval: 86400
+          path: ./ruleset/BanEasyList.yaml
+        BanEasyListChina:
+          behavior: classical 
+          type: http
+          url: "https://cdn.jsdelivr.net/gh/Mythologyli/ZJU-Rule/Clash/Providers/BanEasyListChina.yaml"
+          interval: 86400
+          path: ./ruleset/BanEasyListChina.yaml
+        BanEasyPrivacy:
+          behavior: classical 
+          type: http
+          url: "https://cdn.jsdelivr.net/gh/Mythologyli/ZJU-Rule/Clash/Providers/BanEasyPrivacy.yaml"
+          interval: 86400
+          path: ./ruleset/BanEasyPrivacy.yaml
         Microsoft:
           behavior: classical 
           type: http
           url: "https://cdn.jsdelivr.net/gh/Mythologyli/ZJU-Rule/Clash/Providers/Ruleset/Microsoft.yaml"
           interval: 86400
-          path: ./ACL4SSR/Microsoft.yaml
+          path: ./ruleset/Microsoft.yaml
         ProxyLite:
           behavior: classical 
           type: http
           url: "https://cdn.jsdelivr.net/gh/Mythologyli/ZJU-Rule/Clash/Providers/ProxyLite.yaml"
           interval: 86400
-          path: ./ACL4SSR/ProxyLite.yaml
+          path: ./ruleset/ProxyLite.yaml
         ProxyGFWlist:
           behavior: classical 
           type: http
           url: "https://cdn.jsdelivr.net/gh/Mythologyli/ZJU-Rule/Clash/Providers/ProxyGFWlist.yaml"
           interval: 86400
-          path: ./ACL4SSR/ProxyGFWlist.yaml
+          path: ./ruleset/ProxyGFWlist.yaml
 ```
 
 
