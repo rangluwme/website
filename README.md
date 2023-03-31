@@ -360,13 +360,8 @@ parsers: # array
           interval: 86400
           path: ./ruleset/ProxyGFWlist.yaml
 ```
-
-
 # Code
-- https://invite.efshop.cc/#/register?code=vHGeVVP1
 - https://github.com/Mythologyli/ZJU-Rule/tree/master/Clash/Providers
-- https://github.abskoop.workers.dev/https://github.com/rangluwme/rule/releases/download/1.0/Clash.7z
-
 ---
 - http://www.msftconnecttest.com/connecttest.txt
 - http://captive.apple.com/
