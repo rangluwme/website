@@ -18,6 +18,10 @@ parsers: # array
       } 
     yaml:
       prepend-rules:
+        - DOMAIN-KEYWORD,logitechg,REJECT
+        - DOMAIN-KEYWORD,analytics,REJECT 
+        - DOMAIN-KEYWORD,adservice,REJECT
+        - DOMAIN-SUFFIX,log-global.aliyuncs.com,REJECT
         - RULE-SET,BanAD,REJECT
         - RULE-SET,BanProgramAD,REJECT
         - RULE-SET,BanEasyListChina,REJECT
@@ -25,9 +29,7 @@ parsers: # array
         - RULE-SET,BanEasyPrivacy,REJECT
         - RULE-SET,reject,REJECT
 
-        - RULE-SET,zju,DIRECT
         - RULE-SET,proxylist,💥 Proxy Mode
-        
         - RULE-SET,Microsoft,DIRECT
         - RULE-SET,direct,DIRECT
         - RULE-SET,cncidr,DIRECT
@@ -40,6 +42,9 @@ parsers: # array
       prepend-proxy-groups:
         - name: 💥 Proxy Mode
           type: select
+          # type: url-test
+          # url: http://www.apple.com/library/test/success.html
+          # interval: 10
           proxies:
           - 🇭🇰 香港
           - 🇨🇳 台湾
@@ -50,10 +55,10 @@ parsers: # array
           url: http://www.apple.com/library/test/success.html
           interval: 10
         - name: 🇨🇳 台湾 
-          type: select
-          # type: url-test
-          # url: http://www.apple.com/library/test/success.html
-          # interval: 10
+          # type: select
+          type: url-test
+          url: http://www.apple.com/library/test/success.html
+          interval: 10
         - name: 🇸🇬 新加坡 
           type: url-test
           url: http://www.apple.com/library/test/success.html
@@ -73,12 +78,6 @@ parsers: # array
           behavior: classical
           url: "https://raw.githubusercontent.com/rangluwme/rule/main/directlist.yaml"
           path: ./ruleset/directlist.yaml
-          interval: 86400
-        zju:
-          type: http
-          behavior: classical
-          url: "https://raw.githubusercontent.com/rangluwme/rule/main/zju.yaml"
-          path: ./ruleset/zju.yaml
           interval: 86400
         proxylist: 
           type: http
