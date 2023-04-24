@@ -152,7 +152,55 @@ parsers: # array
           interval: 86400
           path: ./ruleset/ProxyGFWlist.yaml
 </pre>
-
+<hr />
+<pre>
+mixin: # Mixin 配置文件
+  tun:
+    enable: true
+    stack: gvisor
+    auto-route: true
+    auto-detect-interface: true
+    dns-hijack:
+      - any:53
+  dns:
+    enable: true
+    listen: 0.0.0.0:53
+    ipv6: true
+    enhanced-mode: fake-ip
+    fake-ip-range: 198.18.0.1/16
+    fake-ip-filter:
+      - "*.msftncsi.com"
+      - "*.msftconnecttest.com"
+      - WORKGROUP
+      - zjuwlan.intl.zju.edu.cn
+    use-hosts: false
+    # nameserver-policy:
+    #  '+.zju.edu.cn': '10.105.1.124'
+    #  '+.cc98.org': '10.105.1.124'
+    #  '+.cc98.top': '10.105.1.124'
+    # proxy-server-nameserver:
+    default-nameserver:
+      - 223.5.5.5
+      - 8.8.4.4
+    nameserver:
+      - 10.105.1.124
+      - 10.105.1.122
+      - https://dns.alidns.com/dns-query
+      - https://doh.pub/dns-query
+    fallback:
+      - https://east.lele233.pro/dns-query
+      - https://east.lele233.pro/cdn
+      - https://south.lele233.pro/dns-query
+      - https://south.lele233.pro/cdn
+      - https://hk.lele233.cn:2333/dns-query
+    fallback-filter:
+      geoip: true
+      geoip-code: CN
+      ipcidr:
+         - 240.0.0.0/4
+         - 0.0.0.0/32
+         - 127.0.0.1/32
+</pre>
 
 </body>
 </html>
