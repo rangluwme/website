@@ -9,8 +9,55 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
     <meta name="author" content="viggo" />
     <title>让路's 导航</title>
+    <script type="text/javascript">
+        //禁用右键（防止右键查看源代码） 
+        window.oncontextmenu = function () { return false; }
+        //禁止任何键盘敲击事件（防止F12和shift+ctrl+i调起开发者工具） 
+        window.onkeydown = window.onkeyup = window.onkeypress = function () {
+            window.event.returnValue = false;
+            return false;
+        }
+        //如果用户在工具栏调起开发者工具，那么判断浏览器的可视高度和可视宽度是否有改变，如有改变则关闭本页面 
+        var h = window.innerHeight, w = window.innerWidth;
+        window.onresize = function () {
+            if (h != window.innerHeight || w != window.innerWidth) {
+                window.close();
+                window.location = "about:blank";
+            }
+        }
+    </script>
+    <script>
+        function fuckyou() {
+            window.close(); //关闭当前窗口(防抽)
+            window.location = "about:blank"; //将当前窗口跳转置空白页
+        }
+        function ck() {
+            console.profile();
+            console.profileEnd();
+            //我们判断一下profiles里面有没有东西，如果有，肯定有人按F12了，没错！！
+            if (console.clear) { console.clear() };
+            if (typeof console.profiles == "object") {
+                return console.profiles.length > 0;
+            }
+        }
+        function hehe() {
+            if ((window.console && (console.firebug || console.table && /firebug/i.test(console.table()))) || (typeof opera == 'object' && typeof 
 
-    <link rel="shortcut icon" href="assets/images/favicon.png">
+opera.postError == 'function' && console.profile.length > 0)) {
+                fuckyou();
+            }
+            if (typeof console.profiles == "object" && console.profiles.length > 0) {
+                fuckyou();
+            }
+        }
+        hehe();
+        window.onresize = function () {
+            if ((window.outerHeight - window.innerHeight) > 200)
+                //判断当前窗口内页高度和窗口高度，如果差值大于200，那么呵呵
+                fuckyou();
+        }
+    </script>
+    <link rel="shortcut icon" href="assets/images/10001.jpg">
     <link rel="stylesheet" href="assets/css/fonts/linecons/css/linecons.css">
     <link rel="stylesheet" href="assets/css/fonts/fontawesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="assets/css/bootstrap.css">
@@ -508,9 +555,6 @@
                 </div>
             </div>
             <br />
-            
-
-
 
             <!-- 1.4 主流报纸杂志 -->
             <h4 class="text-gray"><i class="linecons-tag" style="margin-right: 7px;" id="news-newspaper-1-4"></i>主流报纸杂志
@@ -744,6 +788,15 @@
                 <div class="col-sm-3"> <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('https://www.forbes.com/', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title=""> <div class="xe-comment-entry"> <a class="xe-user-img"> <img data-src="assets/images/logos/forbes.png" class="lozad img-circle" width="50" height="50"> </a> <span class="label label-info" data-toggle="tooltip" data-placement="left" title="" data-original-title="Hello I am a Tooltip"></span> <div class="xe-comment"> <a href="#" class="xe-user-name overflowClip_1"> <strong>Forbes</strong> </a> <p class="overflowClip_2"></p> </div> </div> </div> </div></div>
             <br />
             <iframe src="https://ip.skk.moe/simple" style="width: 75%; border: 0"></iframe>
+            
+            <div class="footer-inner">
+                <!-- Add your copyright text here -->
+                <div class="footer-text" style="font-size: 17px;" >
+                    <a href="mailto:rangluw.me@gmail.com" target="_blank" >
+                        📧 rangluw.me@gmail.com
+                        </a>
+                </div>
+            </div>
         </div>
     </div>
 
