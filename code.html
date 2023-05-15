@@ -19,9 +19,6 @@ parsers: # array
       } 
     yaml:
       prepend-rules:
-        - DOMAIN-KEYWORD,analytics,REJECT 
-        - DOMAIN-KEYWORD,adservice,REJECT
-        - DOMAIN-SUFFIX,log-global.aliyuncs.com,REJECT
         - RULE-SET,BanAD,REJECT
         - RULE-SET,BanProgramAD,REJECT
         - RULE-SET,BanEasyListChina,REJECT
@@ -177,11 +174,6 @@ mixin: # Mixin 配置文件
       - WORKGROUP
       - zjuwlan.intl.zju.edu.cn
     use-hosts: false
-    # nameserver-policy:
-    #  '+.zju.edu.cn': '10.105.1.124'
-    #  '+.cc98.org': '10.105.1.124'
-    #  '+.cc98.top': '10.105.1.124'
-    # proxy-server-nameserver:
     default-nameserver:
       - 223.5.5.5
       - 8.8.4.4
