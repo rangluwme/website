@@ -148,6 +148,12 @@ parsers: # array
           url: "https://cdn.jsdelivr.net/gh/Mythologyli/ZJU-Rule/Clash/Providers/ProxyGFWlist.yaml"
           interval: 86400
           path: ./ruleset/ProxyGFWlist.yaml
+        rejectlist: # 广告域名列表
+          type: http
+          behavior:  classical
+          url: "https://raw.githubusercontent.com/rangluwme/rule/main/rejectlist.yaml"
+          path: ./ruleset/rejectlist.yaml
+          interval: 86400
 </pre>
 <hr />
 <pre>
