@@ -8,8 +8,9 @@
     
 
 <pre>
-parsers: # array 
-  - reg: ^.*$
+parsers: # array ^.*$
+  - reg: ^https:\/\/rangluw\.top\/clash$
+  # ^(?!.*https:\/\/rangluw\.top\/clash).*$
     code: |
       module.exports.parse = (raw, { yaml }) => {
         const rawObj = yaml.parse(raw)
