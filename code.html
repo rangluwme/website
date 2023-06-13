@@ -10,7 +10,6 @@
 <pre>
 parsers: # array ^.*$
   - reg: ^https:\/\/rangluw\.top\/clash$
-  # ^(?!.*https:\/\/rangluw\.top\/clash).*$
     code: |
       module.exports.parse = (raw, { yaml }) => {
         const rawObj = yaml.parse(raw)
@@ -150,6 +149,7 @@ mixin: # Mixin 配置文件
 ^((?!A).)*$     节点名不含有 A
 (?!.*(A)).*(B)  节点名不含有 A，同时含有 B
 香港|HK|新加坡|SG|狮城|日本|韩国|KR|JP|美|US|台湾|TW
+^(?!.*https:\/\/rangluw\.top\/clash).*$
 </pre>
 </body>
 </html>
