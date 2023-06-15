@@ -141,7 +141,34 @@ mixin: # Mixin 配置文件
          - 0.0.0.0/32
          - 127.0.0.1/32
 </pre>
+<hr/>
 
+<pre>
+mixin: # Mixin 配置文件
+  dns:
+    enable: true
+    ipv6: true
+    nameserver:
+      - 10.105.1.124
+      - 10.105.1.122
+      - https://dns.alidns.com/dns-query
+      - https://doh.pub/dns-query
+    fallback:
+      - https://east.lele233.pro/dns-query
+      - https://east.lele233.pro/cdn
+      - https://south.lele233.pro/dns-query
+      - https://south.lele233.pro/cdn
+      - https://hk.lele233.cn:2333/dns-query
+      - 1.1.1.1
+      - 8.8.8.8
+    fallback-filter:
+      geoip: true
+      geoip-code: CN
+      ipcidr:
+         - 240.0.0.0/4
+         - 0.0.0.0/32
+         - 127.0.0.1/32
+</pre>
 <hr />
 <pre>
 (A).*(B)        节点名既有 A又有 B
@@ -150,6 +177,11 @@ mixin: # Mixin 配置文件
 (?!.*(A)).*(B)  节点名不含有 A，同时含有 B
 香港|HK|新加坡|SG|狮城|日本|韩国|KR|JP|美|US|台湾|TW
 ^(?!.*https:\/\/rangluw\.top\/clash).*$
+<a href="https://home.xsus.me/index.php/#/register?code=RLxsKCoU">Referral-1</a>
+<a href="https://p.xflash.cc/#/register?code=5ARsvXJN">Referral-2</a>
+<a href="https://www.fyb-aff.com/auth/register?code=wtul">Referral-3</a>
+<a href="https://teacat.cloud/#/register?code=XpD9aOcc">Referral-4</a>
+
 </pre>
 </body>
 </html>
