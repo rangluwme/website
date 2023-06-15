@@ -8,8 +8,8 @@
     
 
 <pre>
-parsers: # array ^.*$
-  - reg: ^https:\/\/rangluw\.top\/clash$
+parsers: # array 
+  - reg: ^.*$
     code: |
       module.exports.parse = (raw, { yaml }) => {
         const rawObj = yaml.parse(raw)
@@ -73,19 +73,83 @@ parsers: # array ^.*$
         BanEasyList:
           behavior: classical 
           type: http
-          url: "https://cdn.jsdelivr.net/gh/Mythologyli/ZJU-Rule/Clash/Providers/BanEasyList.yaml"
+          url: "https://raw.githubusercontent.com/Mythologyli/ZJU-Rule/master/Clash/Providers/BanEasyList.yaml"
           interval: 86400
           path: ./ruleset/BanEasyList.yaml
         BanEasyListChina:
           behavior: classical 
           type: http
-          url: "https://cdn.jsdelivr.net/gh/Mythologyli/ZJU-Rule/Clash/Providers/BanEasyListChina.yaml"
+          url: "https://raw.githubusercontent.com/Mythologyli/ZJU-Rule/master/Clash/Providers/BanEasyListChina.yaml"
           interval: 86400
           path: ./ruleset/BanEasyListChina.yaml
         BanEasyPrivacy:
           behavior: classical 
           type: http
-          url: "https://cdn.jsdelivr.net/gh/Mythologyli/ZJU-Rule/Clash/Providers/BanEasyPrivacy.yaml"
+          url: "https://raw.githubusercontent.com/Mythologyli/ZJU-Rule/master/Clash/Providers/BanEasyPrivacy.yaml"
+          interval: 86400
+          path: ./ruleset/BanEasyPrivacy.yaml
+        rejectlist: # 广告域名列表
+          type: http
+          behavior:  classical
+          url: "https://raw.githubusercontent.com/rangluwme/rule/main/rejectlist.yaml"
+          path: ./ruleset/rejectlist.yaml
+          interval: 86400
+</pre>
+<hr />
+<pre>
+parsers: # array 
+  - reg: ^.*$
+    code: |
+      module.exports.parse = (raw, { yaml }) => {
+        const rawObj = yaml.parse(raw)
+        const groups = []
+        const rules = []
+        return yaml.stringify({ ...rawObj, 'proxy-groups': groups, rules })
+      } 
+    yaml:
+      prepend-rules:
+        - RULE-SET,rejectlist,REJECT
+        - RULE-SET,BanEasyListChina,REJECT
+        - RULE-SET,BanEasyList,REJECT
+        - RULE-SET,BanEasyPrivacy,REJECT
+        - RULE-SET,proxylist,🌍
+        - RULE-SET,directlist,DIRECT
+        - GEOIP,CN,DIRECT
+        - MATCH,🌍
+      prepend-proxy-groups:
+        - name: 🌍
+          type: select
+      commands:
+        - proxy-groups.🌍.proxies=[]proxyNames|香港|HK|新加坡|SG|狮城|日本|韩国|KR|JP|美|US|台湾|TW
+      mix-rule-providers: 
+        directlist: 
+          type: http
+          behavior: classical
+          url: "https://raw.githubusercontent.com/rangluwme/rule/main/directlist.yaml"
+          path: ./ruleset/directlist.yaml
+          interval: 86400
+        proxylist: 
+          type: http
+          behavior: classical
+          url: "https://raw.githubusercontent.com/rangluwme/rule/main/proxylist.yaml"
+          path: ./ruleset/proxylist.yaml
+          interval: 86400
+        BanEasyList:
+          behavior: classical 
+          type: http
+          url: "https://raw.githubusercontent.com/Mythologyli/ZJU-Rule/master/Clash/Providers/BanEasyList.yaml"
+          interval: 86400
+          path: ./ruleset/BanEasyList.yaml
+        BanEasyListChina:
+          behavior: classical 
+          type: http
+          url: "https://raw.githubusercontent.com/Mythologyli/ZJU-Rule/master/Clash/Providers/BanEasyListChina.yaml"
+          interval: 86400
+          path: ./ruleset/BanEasyListChina.yaml
+        BanEasyPrivacy:
+          behavior: classical 
+          type: http
+          url: "https://raw.githubusercontent.com/Mythologyli/ZJU-Rule/master/Clash/Providers/BanEasyPrivacy.yaml"
           interval: 86400
           path: ./ruleset/BanEasyPrivacy.yaml
         rejectlist: # 广告域名列表
@@ -171,6 +235,7 @@ mixin: # Mixin 配置文件
 (?!.*(A)).*(B)  节点名不含有 A，同时含有 B
 香港|HK|新加坡|SG|狮城|日本|韩国|KR|JP|美|US|台湾|TW
 ^(?!.*https:\/\/rangluw\.top\/clash).*$
+^https:\/\/rangluw\.top\/clash$
 <a href="https://home.xsus.me/index.php/#/register?code=RLxsKCoU">Referral-1</a>
 <a href="https://p.xflash.cc/#/register?code=5ARsvXJN">Referral-2</a>
 <a href="https://www.fyb-aff.com/auth/register?code=wtul">Referral-3</a>
