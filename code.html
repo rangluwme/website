@@ -5,97 +5,6 @@
     <title>Code</title>
 </head>
 <body>
-    
-
-<pre>
-parsers: # array 
-  - reg: ^.*$
-    code: |
-      module.exports.parse = (raw, { yaml }) => {
-        const rawObj = yaml.parse(raw)
-        const groups = []
-        const rules = []
-        return yaml.stringify({ ...rawObj, 'proxy-groups': groups, rules })
-      } 
-    yaml:
-      prepend-rules:
-        - RULE-SET,rejectlist,REJECT
-        - RULE-SET,BanEasyListChina,REJECT
-        - RULE-SET,BanEasyList,REJECT
-        - RULE-SET,BanEasyPrivacy,REJECT
-        - RULE-SET,proxylist,🌍
-        - RULE-SET,directlist,DIRECT
-        - GEOIP,CN,DIRECT
-        - MATCH,🌍
-      prepend-proxy-groups:
-        - name: 🌍
-          type: select
-          proxies:
-          - 🇭🇰 香港
-          - 🇨🇳 台湾
-          - 🇸🇬 新加坡
-          - 🇺🇲 美国
-        - name: 🇭🇰 香港
-          type: url-test
-          url: http://www.apple.com/library/test/success.html
-          interval: 10
-        - name: 🇨🇳 台湾 
-          # type: select
-          type: url-test
-          url: http://www.apple.com/library/test/success.html
-          interval: 10
-        - name: 🇸🇬 新加坡 
-          type: url-test
-          url: http://www.apple.com/library/test/success.html
-          interval: 10
-        - name: 🇺🇲 美国
-          type: url-test
-          url: http://www.apple.com/library/test/success.html
-          interval: 10
-      commands:
-        - proxy-groups.🇭🇰 香港.proxies=[]proxyNames|港|HK
-        - proxy-groups.🇨🇳 台湾.proxies=[]proxyNames|台|TW
-        - proxy-groups.🇸🇬 新加坡.proxies=[]proxyNames|新|狮城|SG
-        - proxy-groups.🇺🇲 美国.proxies=[]proxyNames|美|US|日|韩
-      mix-rule-providers: 
-        directlist: 
-          type: http
-          behavior: classical
-          url: "https://raw.githubusercontent.com/rangluwme/rule/main/directlist.yaml"
-          path: ./ruleset/directlist.yaml
-          interval: 86400
-        proxylist: 
-          type: http
-          behavior: classical
-          url: "https://raw.githubusercontent.com/rangluwme/rule/main/proxylist.yaml"
-          path: ./ruleset/proxylist.yaml
-          interval: 86400
-        BanEasyList:
-          behavior: classical 
-          type: http
-          url: "https://raw.githubusercontent.com/Mythologyli/ZJU-Rule/master/Clash/Providers/BanEasyList.yaml"
-          interval: 86400
-          path: ./ruleset/BanEasyList.yaml
-        BanEasyListChina:
-          behavior: classical 
-          type: http
-          url: "https://raw.githubusercontent.com/Mythologyli/ZJU-Rule/master/Clash/Providers/BanEasyListChina.yaml"
-          interval: 86400
-          path: ./ruleset/BanEasyListChina.yaml
-        BanEasyPrivacy:
-          behavior: classical 
-          type: http
-          url: "https://raw.githubusercontent.com/Mythologyli/ZJU-Rule/master/Clash/Providers/BanEasyPrivacy.yaml"
-          interval: 86400
-          path: ./ruleset/BanEasyPrivacy.yaml
-        rejectlist: # 广告域名列表
-          type: http
-          behavior:  classical
-          url: "https://raw.githubusercontent.com/rangluwme/rule/main/rejectlist.yaml"
-          path: ./ruleset/rejectlist.yaml
-          interval: 86400
-</pre>
-<hr />
 <pre>
 parsers: # array 
   - reg: ^.*$
@@ -159,52 +68,7 @@ parsers: # array
           path: ./ruleset/rejectlist.yaml
           interval: 86400
 </pre>
-<hr />
-<pre>
-mixin: # Mixin 配置文件
-  tun:
-    enable: true
-    stack: gvisor
-    auto-route: true
-    auto-detect-interface: true
-    dns-hijack:
-      - any:53
-  dns:
-    enable: true
-    listen: 0.0.0.0:53
-    ipv6: true
-    enhanced-mode: fake-ip
-    fake-ip-range: 198.18.0.1/16
-    fake-ip-filter:
-      - "*.msftncsi.com"
-      - "*.msftconnecttest.com"
-      - WORKGROUP
-      - zjuwlan.intl.zju.edu.cn
-    use-hosts: false
-    default-nameserver:
-      - 223.5.5.5
-      - 8.8.4.4
-    nameserver:
-      - 10.105.1.124
-      - 10.105.1.122
-      - https://dns.alidns.com/dns-query
-      - https://doh.pub/dns-query
-    fallback:
-      - https://east.lele233.pro/dns-query
-      - https://east.lele233.pro/cdn
-      - https://south.lele233.pro/dns-query
-      - https://south.lele233.pro/cdn
-      - https://hk.lele233.cn:2333/dns-query
-      - 1.1.1.1
-      - 8.8.8.8
-    fallback-filter:
-      geoip: true
-      geoip-code: CN
-      ipcidr:
-         - 240.0.0.0/4
-         - 0.0.0.0/32
-         - 127.0.0.1/32
-</pre>
+
 <hr/>
 
 <pre>
@@ -240,6 +104,38 @@ mixin: # Mixin 配置文件
 <a href="https://p.xflash.cc/#/register?code=5ARsvXJN">Referral-2</a>
 <a href="https://www.fyb-aff.com/auth/register?code=wtul">Referral-3</a>
 <a href="https://teacat.cloud/#/register?code=XpD9aOcc">Referral-4</a>
+
+<pre>
+prepend-proxy-groups:
+  - name: 🌍
+    type: select
+    proxies:
+    - 🇭🇰 香港
+    - 🇨🇳 台湾
+    - 🇸🇬 新加坡
+    - 🇺🇲 美国
+  - name: 🇭🇰 香港
+    type: url-test
+    url: http://www.apple.com/library/test/success.html
+    interval: 10
+  - name: 🇨🇳 台湾 
+    type: url-test
+    url: http://www.apple.com/library/test/success.html
+    interval: 10
+  - name: 🇸🇬 新加坡 
+    type: url-test
+    url: http://www.apple.com/library/test/success.html
+    interval: 10
+  - name: 🇺🇲 美国
+    type: url-test
+    url: http://www.apple.com/library/test/success.html
+    interval: 10
+commands:
+  - proxy-groups.🇭🇰 香港.proxies=[]proxyNames|港|HK
+  - proxy-groups.🇨🇳 台湾.proxies=[]proxyNames|台|TW
+  - proxy-groups.🇸🇬 新加坡.proxies=[]proxyNames|新|狮城|SG
+  - proxy-groups.🇺🇲 美国.proxies=[]proxyNames|美|US
+</pre>
 
 </pre>
 </body>
