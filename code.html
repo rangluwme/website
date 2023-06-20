@@ -21,8 +21,8 @@ parsers: # array
         - RULE-SET,BanEasyListChina,REJECT
         - RULE-SET,BanEasyList,REJECT
         - RULE-SET,BanEasyPrivacy,REJECT
-        - RULE-SET,proxylist,🌍
         - RULE-SET,directlist,DIRECT
+        - RULE-SET,proxylist,🌍
         - GEOIP,CN,DIRECT
         - MATCH,🌍
       prepend-proxy-groups:
@@ -43,6 +43,12 @@ parsers: # array
           url: "https://ghproxy.com/https://raw.githubusercontent.com/rangluwme/rule/main/proxylist.yaml"
           path: ./ruleset/proxylist.yaml
           interval: 86400
+        rejectlist: # 广告域名列表
+          type: http
+          behavior:  classical
+          url: "https://ghproxy.com/https://raw.githubusercontent.com/rangluwme/rule/main/rejectlist.yaml"
+          path: ./ruleset/rejectlist.yaml
+          interval: 86400
         BanEasyList:
           behavior: classical 
           type: http
@@ -61,12 +67,6 @@ parsers: # array
           url: "https://ghproxy.com/https://raw.githubusercontent.com/Mythologyli/ZJU-Rule/master/Clash/Providers/BanEasyPrivacy.yaml"
           interval: 86400
           path: ./ruleset/BanEasyPrivacy.yaml
-        rejectlist: # 广告域名列表
-          type: http
-          behavior:  classical
-          url: "https://ghproxy.com/https://raw.githubusercontent.com/rangluwme/rule/main/rejectlist.yaml"
-          path: ./ruleset/rejectlist.yaml
-          interval: 86400
 </pre>
 
 <hr/>
