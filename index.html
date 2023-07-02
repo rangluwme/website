@@ -25,7 +25,7 @@
 <body class="page-body" style="position: absolute; left: 11%; width: 80%;">
     <div style="text-align: center;margin-top: 20px;">
         <a href="https://time.is/shanghai" id="time_is_link"></a>
-        <span id="China_Standard_Time_z429" style="text-align: center;font-size:40px"></span>
+        <span id="China_Standard_Time_z429" style="text-align: center;font-size:50px" onclick="window.open('/clock.html', '_blank')"></span>
         <script src="assets/js/t.js"></script>
         <script>time_is_widget.init({ China_Standard_Time_z429: {} });</script>
     </div>
@@ -37,7 +37,6 @@
             <h4 class="text-gray" onclick="window.open('/clock.html', '_blank')"><i class="linecons-tag"
                     style="margin-right: 7px;" id="news-financial-1-1"></i> 常用</h4>
             <div class="row">
-                
                 <div class="col-sm-3">
                     <div class="xe-widget xe-conversations box2 label-info"
                         onclick="window.open('https://weibo.com/mygroups?gid=110005667498588', '_blank')"
@@ -67,14 +66,42 @@
                 </div>
                 <div class="col-sm-3">
                     <div class="xe-widget xe-conversations box2 label-info"
+                        onclick="window.open('https://v2ex.com/?tab=hot', '_blank')" data-toggle="tooltip"
+                        data-placement="bottom">
+                        <div class="xe-comment-entry"> <a class="xe-user-img"> <img
+                                    data-src="assets/images/logos/v2ex.png" class="lozad img-circle" width="40"> </a>
+                            <div class="xe-comment"> <a href="#" class="xe-user-name overflowClip_1"
+                                    style="font-size: 17px;">
+                                    V2EX </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="xe-widget xe-conversations box2 label-info"
+                        onclick="window.open('https://www.zhihu.com/knowledge-plan/hot-question/hot/0/hour', '_blank')"
+                        data-toggle="tooltip" data-placement="bottom">
+                        <div class="xe-comment-entry">
+                            <a class="xe-user-img">
+                                <img data-src="assets/images/logos/zhihu-logo.svg" class="lozad img-circle" width="40"
+                                    height="60">
+                            </a>
+                            <div class="xe-comment">
+                                <a href="#" class="xe-user-name overflowClip_1" style="font-size: 17px;"> 
+                                    知乎 </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="xe-widget xe-conversations box2 label-info"
                         onclick="window.open('https://www.youtube.com/', '_blank')" data-toggle="tooltip"
-                        data-placement="bottom"="">
+                        data-placement="bottom">
                         <div class="xe-comment-entry"> <a class="xe-user-img"> <img
                                     data-src="assets/images/logos/ytb.jpg" class="lozad img-circle" width="40"> </a>
                             <div class="xe-comment"> <a href="#" class="xe-user-name overflowClip_1"
                                     style="font-size: 17px;">
                                     Youtube </a>
-
                             </div>
                         </div>
                     </div>
@@ -82,14 +109,13 @@
                 <div class="col-sm-3">
                     <div class="xe-widget xe-conversations box2 label-info"
                         onclick="window.open('https://www.bilibili.com/', '_blank')" data-toggle="tooltip"
-                        data-placement="bottom"="">
+                        data-placement="bottom">
                         <div class="xe-comment-entry"> <a class="xe-user-img"> <img
                                     data-src="assets/images/logos/2.5.6.png" class="lozad img-circle" width="40"
                                     height="58"> </a>
                             <div class="xe-comment"> <a href="#" class="xe-user-name overflowClip_1"
                                     style="font-size: 17px;">
                                     Bilibili </a>
-
                             </div>
                         </div>
                     </div>
@@ -97,13 +123,27 @@
                 <div class="col-sm-3">
                     <div class="xe-widget xe-conversations box2 label-info"
                         onclick="window.open('https://www.icloud.com.cn', '_blank')" data-toggle="tooltip"
-                        data-placement="bottom"="">
+                        data-placement="bottom">
                         <div class="xe-comment-entry">
                             <a class="xe-user-img">
                                 <img data-src="assets/images/logos/6.4.4.png" class="lozad img-circle" width="40"> </a>
                             <div class="xe-comment">
                                 <a href="#" class="xe-user-name overflowClip_1" style="font-size: 17px;">
                                     iCloud </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('tg://', '_blank')"
+                        data-toggle="tooltip" data-placement="bottom">
+                        <div class="xe-comment-entry">
+                            <a class="xe-user-img">
+                                <img data-src="assets/images/logos/Telegram.svg" class="lozad img-circle" width="40">
+                            </a>
+                            <div class="xe-comment">
+                                <a href="#" class="xe-user-name overflowClip_1" style="font-size: 17px;">
+                                    Telegram </a>
                             </div>
                         </div>
                     </div>
@@ -136,49 +176,8 @@
                 </div>
                 <div class="col-sm-3">
                     <div class="xe-widget xe-conversations box2 label-info"
-                        onclick="window.open('https://v2ex.com/?tab=hot', '_blank')" data-toggle="tooltip"
-                        data-placement="bottom">
-                        <div class="xe-comment-entry"> <a class="xe-user-img"> <img
-                                    data-src="assets/images/logos/v2ex.png" class="lozad img-circle" width="40"> </a>
-                            <div class="xe-comment"> <a href="#" class="xe-user-name overflowClip_1"
-                                    style="font-size: 17px;">
-                                    V2EX </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-3">
-                    <div class="xe-widget xe-conversations box2 label-info"
-                        onclick="window.open('https://www.zhihu.com/knowledge-plan/hot-question/hot/0/hour', '_blank')"
-                        data-toggle="tooltip" data-placement="bottom">
-                        <div class="xe-comment-entry">
-                            <a class="xe-user-img">
-                                <img data-src="assets/images/logos/zhihu-logo.svg" class="lozad img-circle" width="40"
-                                    height="60">
-                            </a>
-                            <div class="xe-comment">
-                                <a href="#" class="xe-user-name overflowClip_1" style="font-size: 17px;"> 知乎 </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-3">
-                    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('tg://', '_blank')"
-                        data-toggle="tooltip" data-placement="bottom">
-                        <div class="xe-comment-entry">
-                            <a class="xe-user-img">
-                                <img data-src="assets/images/logos/Telegram.svg" class="lozad img-circle" width="40">
-                            </a>
-                            <div class="xe-comment">
-                                <a href="#" class="xe-user-name overflowClip_1" style="font-size: 17px;">Telegram </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-3">
-                    <div class="xe-widget xe-conversations box2 label-info"
                         onclick="window.open('http://www.21jingji.com/', '_blank')" data-toggle="tooltip"
-                        data-placement="bottom"="">
+                        data-placement="bottom">
                         <div class="xe-comment-entry"> <a class="xe-user-img">
                                 <img data-src="assets/images/logos/21.png" class="lozad img-circle" width="45"> </a>
                             <div class="xe-comment"> <a href="#" class="xe-user-name overflowClip_1"
@@ -191,7 +190,7 @@
                 <div class="col-sm-3">
                     <div class="xe-widget xe-conversations box2 label-info"
                         onclick="window.open('https://www.yicai.com/', '_blank')" data-toggle="tooltip"
-                        data-placement="bottom"="">
+                        data-placement="bottom">
                         <div class="xe-comment-entry"> <a class="xe-user-img">
                                 <img data-src="assets/images/logos/yicai.png" class="lozad img-circle" width="45"> </a>
                             <div class="xe-comment"> <a href="#" class="xe-user-name overflowClip_1"
@@ -238,7 +237,7 @@
                 <div class="col-sm-3">
                     <div class="xe-widget xe-conversations box2 label-info"
                         onclick="window.open('http://www.news.cn/comments/index.html', '_blank')" data-toggle="tooltip"
-                        data-placement="bottom"  ="">
+                        data-placement="bottom"  >
                         <div class="xe-comment-entry"> <a class="xe-user-img"> <img
                                     data-src="assets/images/logos/xinhua.png" class="lozad img-circle" width="40"> </a>
 
@@ -252,7 +251,7 @@
                 <div class="col-sm-3">
                     <div class="xe-widget xe-conversations box2 label-info"
                         onclick="window.open('http://www.news.cn/politics/xhll/lldt/index.html', '_blank')" data-toggle="tooltip"
-                        data-placement="bottom"  ="">
+                        data-placement="bottom"  >
                         <div class="xe-comment-entry"> <a class="xe-user-img"> <img
                                     data-src="assets/images/logos/xinhua.png" class="lozad img-circle" width="40"> </a>
 
@@ -266,7 +265,7 @@
                 <div class="col-sm-3">
                     <div class="xe-widget xe-conversations box2 label-info"
                         onclick="window.open('http://www.news.cn/depthobserve.htm?type=xhsply', '_blank')" data-toggle="tooltip"
-                        data-placement="bottom"  ="">
+                        data-placement="bottom"  >
                         <div class="xe-comment-entry"> <a class="xe-user-img"> <img
                                     data-src="assets/images/logos/xinhua.png" class="lozad img-circle" width="40"> </a>
 
@@ -281,7 +280,7 @@
                     <div class="xe-widget xe-conversations box2 label-info"
                         onclick="window.open('http://www.xinhuanet.com/mrdx/', '_blank')" data-toggle="tooltip"
                         data-placement="bottom" 
-                        ="">
+                        >
                         <div class="xe-comment-entry"> 
                             <a class="xe-user-img"> 
                                 <img data-src="assets/images/logos/xinhua.png" class="lozad img-circle" width="50" ></a> 
@@ -297,7 +296,7 @@
                     <div class="xe-widget xe-conversations box2 label-info"
                         onclick="window.open('http://people.com.cn/', '_blank')" data-toggle="tooltip"
                         data-placement="bottom" 
-                        ="">
+                        >
                         <div class="xe-comment-entry"> 
                             <a class="xe-user-img"> 
                                 <img data-src="assets/images/logos/renmin.png" class="lozad img-circle" width="40" ></a> 
@@ -311,7 +310,7 @@
                     <div class="xe-widget xe-conversations box2 label-info"
                         onclick="window.open('http://cpc.people.com.cn/GB/164113/index.html', '_blank')" data-toggle="tooltip"
                         data-placement="bottom" 
-                        ="">
+                        >
                         <div class="xe-comment-entry"> 
                             <a class="xe-user-img"> 
                                 <img data-src="assets/images/logos/renmin.png" class="lozad img-circle" width="40" ></a> 
@@ -327,7 +326,7 @@
                     <div class="xe-widget xe-conversations box2 label-info"
                         onclick="window.open('http://opinion.people.com.cn/', '_blank')" data-toggle="tooltip"
                         data-placement="bottom" 
-                        ="">
+                        >
                         <div class="xe-comment-entry"> 
                             <a class="xe-user-img"> 
                                 <img data-src="assets/images/logos/renmin.png" class="lozad img-circle" width="40" ></a> 
@@ -343,7 +342,7 @@
                     <div class="xe-widget xe-conversations box2 label-info"
                         onclick="window.open('http://theory.people.com.cn/', '_blank')" data-toggle="tooltip"
                         data-placement="bottom" 
-                        ="">
+                        >
                         <div class="xe-comment-entry"> 
                             <a class="xe-user-img"> 
                                 <img data-src="assets/images/logos/renmin.png" class="lozad img-circle" width="40" ></a> 
@@ -359,7 +358,7 @@
                     <div class="xe-widget xe-conversations box2 label-info"
                         onclick="window.open('http://qstheory.cn/', '_blank')" data-toggle="tooltip"
                         data-placement="bottom" 
-                        ="">
+                        >
                         <div class="xe-comment-entry"> 
                             <a class="xe-user-img"> 
                                 <img data-src="assets/images/logos/qiushi.png" class="lozad img-circle" width="50" ></a> 
@@ -375,7 +374,7 @@
                     <div class="xe-widget xe-conversations box2 label-info"
                         onclick="window.open('http://www.banyuetan.org/', '_blank')" data-toggle="tooltip"
                         data-placement="bottom" 
-                        ="">
+                        >
                         <div class="xe-comment-entry"> 
                             <a class="xe-user-img"> 
                                 <img data-src="assets/images/logos/banyuetan.png" class="lozad img-circle" width="50" height="45"></a> 
@@ -397,7 +396,7 @@
                 <div class="col-sm-3">
                     <div class="xe-widget xe-conversations box2 label-info"
                         onclick="window.open('https://apnews.com/', '_blank')" data-toggle="tooltip"
-                        data-placement="bottom"="">
+                        data-placement="bottom">
                         <div class="xe-comment-entry"> <a class="xe-user-img"> <img
                                     data-src="assets/images/logos/1.1.1.png" class="lozad img-circle" width="40"> </a>
                             <div class="xe-comment"> <a href="#" class="xe-user-name overflowClip_1"
@@ -410,7 +409,7 @@
                 <div class="col-sm-3">
                     <div class="xe-widget xe-conversations box2 label-info"
                         onclick="window.open('https://www.reuters.com/', '_blank')" data-toggle="tooltip"
-                        data-placement="bottom"="">
+                        data-placement="bottom">
                         <div class="xe-comment-entry"> <a class="xe-user-img"> <img
                                     data-src="assets/images/logos/1.1.2.png" class="lozad img-circle" width="40"> </a>
                             <div class="xe-comment"> <a href="#" class="xe-user-name overflowClip_1"
@@ -423,7 +422,7 @@
                 <div class="col-sm-3">
                     <div class="xe-widget xe-conversations box2 label-info"
                         onclick="window.open('https://www.bloomberg.com/', '_blank')" data-toggle="tooltip"
-                        data-placement="bottom"="">
+                        data-placement="bottom">
                         <div class="xe-comment-entry"> <a class="xe-user-img"> <img
                                     data-src="assets/images/logos/1.1.4.png" class="lozad img-circle" width="40"> </a>
                             <div class="xe-comment"> <a href="#" class="xe-user-name overflowClip_1"
@@ -435,7 +434,7 @@
                 <div class="col-sm-3">
                     <div class="xe-widget xe-conversations box2 label-info"
                         onclick="window.open('https://www.nytimes.com/', '_blank')" data-toggle="tooltip"
-                        data-placement="bottom"="">
+                        data-placement="bottom">
                         <div class="xe-comment-entry"> <a class="xe-user-img"> <img
                                     data-src="assets/images/logos/1.4.1.png" class="lozad img-circle" width="40"> </a>
                             <div class="xe-comment"> <a href="#" class="xe-user-name overflowClip_1"
@@ -448,7 +447,7 @@
                 <div class="col-sm-3">
                     <div class="xe-widget xe-conversations box2 label-info"
                         onclick="window.open('https://www.washingtonpost.com/', '_blank')" data-toggle="tooltip"
-                        data-placement="bottom"="">
+                        data-placement="bottom">
                         <div class="xe-comment-entry"> <a class="xe-user-img"> <img
                                     data-src="assets/images/logos/1.4.2.png" class="lozad img-circle" width="40"> </a>
                             <div class="xe-comment"> <a href="#" class="xe-user-name overflowClip_1"
@@ -461,7 +460,7 @@
                 <div class="col-sm-3">
                     <div class="xe-widget xe-conversations box2 label-info"
                         onclick="window.open('https://www.wsj.com/', '_blank')" data-toggle="tooltip"
-                        data-placement="bottom"="">
+                        data-placement="bottom">
                         <div class="xe-comment-entry"> <a class="xe-user-img"> <img
                                     data-src="assets/images/logos/1.4.3.png" class="lozad img-circle" width="40"> </a>
                             <div class="xe-comment"> <a href="#" class="xe-user-name overflowClip_1"
@@ -474,7 +473,7 @@
                 <div class="col-sm-3">
                     <div class="xe-widget xe-conversations box2 label-info"
                         onclick="window.open('https://www.ft.com/', '_blank')" data-toggle="tooltip"
-                        data-placement="bottom"="">
+                        data-placement="bottom">
                         <div class="xe-comment-entry"> <a class="xe-user-img"> <img
                                     data-src="assets/images/logos/1.4.4.png" class="lozad img-circle" width="40"> </a>
                             <div class="xe-comment"> <a href="#" class="xe-user-name overflowClip_1"
@@ -487,7 +486,7 @@
                 <div class="col-sm-3">
                     <div class="xe-widget xe-conversations box2 label-info"
                         onclick="window.open('https://www.theguardian.com/', '_blank')" data-toggle="tooltip"
-                        data-placement="bottom"="">
+                        data-placement="bottom">
                         <div class="xe-comment-entry"> <a class="xe-user-img"> <img
                                     data-src="assets/images/logos/1.4.5.png" class="lozad img-circle" width="40"> </a>
                             <div class="xe-comment"> <a href="#" class="xe-user-name overflowClip_1"
@@ -500,7 +499,7 @@
                 <div class="col-sm-3">
                     <div class="xe-widget xe-conversations box2 label-info"
                         onclick="window.open('https://www.telegraph.co.uk/', '_blank')" data-toggle="tooltip"
-                        data-placement="bottom"="">
+                        data-placement="bottom">
                         <div class="xe-comment-entry"> <a class="xe-user-img"> <img
                                     data-src="assets/images/logos/1.4.6.png" class="lozad img-circle" width="40"> </a>
                             <div class="xe-comment"> <a href="#" class="xe-user-name overflowClip_1"
@@ -513,7 +512,7 @@
                 <div class="col-sm-3">
                     <div class="xe-widget xe-conversations box2 label-info"
                         onclick="window.open('https://www.theatlantic.com/world/', '_blank')" data-toggle="tooltip"
-                        data-placement="bottom"="">
+                        data-placement="bottom">
                         <div class="xe-comment-entry"> <a class="xe-user-img"> <img
                                     data-src="assets/images/logos/1.4.7.png" class="lozad img-circle" width="40"> </a>
                             <div class="xe-comment"> <a href="#" class="xe-user-name overflowClip_1"
@@ -526,7 +525,7 @@
                 <div class="col-sm-3">
                     <div class="xe-widget xe-conversations box2 label-info"
                         onclick="window.open('https://www.economist.com/', '_blank')" data-toggle="tooltip"
-                        data-placement="bottom"="">
+                        data-placement="bottom">
                         <div class="xe-comment-entry"> <a class="xe-user-img"> <img
                                     data-src="assets/images/logos/1.4.8.png" class="lozad img-circle" width="40"> </a>
                             <div class="xe-comment"> <a href="#" class="xe-user-name overflowClip_1"
@@ -539,7 +538,7 @@
                 <div class="col-sm-3">
                     <div class="xe-widget xe-conversations box2 label-info"
                         onclick="window.open('https://www.nationalreview.com/', '_blank')" data-toggle="tooltip"
-                        data-placement="bottom"="">
+                        data-placement="bottom">
                         <div class="xe-comment-entry"> <a class="xe-user-img"> <img
                                     data-src="assets/images/logos/1.4.9.png" class="lozad img-circle" width="40"> </a>
                             <div class="xe-comment"> <a href="#" class="xe-user-name overflowClip_1"
@@ -552,7 +551,7 @@
                 <div class="col-sm-3">
                     <div class="xe-widget xe-conversations box2 label-info"
                         onclick="window.open('https://www.newyorker.com/', '_blank')" data-toggle="tooltip"
-                        data-placement="bottom"="">
+                        data-placement="bottom">
                         <div class="xe-comment-entry"> <a class="xe-user-img"> <img
                                     data-src="assets/images/logos/1.4.11.png" class="lozad img-circle" width="40"> </a>
                             <div class="xe-comment"> <a href="#" class="xe-user-name overflowClip_1"
@@ -565,7 +564,7 @@
                 <div class="col-sm-3">
                     <div class="xe-widget xe-conversations box2 label-info"
                         onclick="window.open('https://time.com/', '_blank')" data-toggle="tooltip"
-                        data-placement="bottom"="">
+                        data-placement="bottom">
                         <div class="xe-comment-entry"> <a class="xe-user-img"> <img
                                     data-src="assets/images/logos/time2.png" class="lozad img-circle" width="40"> </a>
                             <div class="xe-comment"> <a href="#" class="xe-user-name overflowClip_1"
@@ -577,7 +576,7 @@
                 <div class="col-sm-3">
                     <div class="xe-widget xe-conversations box2 label-info"
                         onclick="window.open('https://www.politico.com', '_blank')" data-toggle="tooltip"
-                        data-placement="bottom"="">
+                        data-placement="bottom">
                         <div class="xe-comment-entry"> <a class="xe-user-img"> <img
                                     data-src="assets/images/logos/politico.png" class="lozad img-circle" width="40">
                             </a>
@@ -592,7 +591,7 @@
                 <div class="col-sm-3">
                     <div class="xe-widget xe-conversations box2 label-info"
                         onclick="window.open('https://www.insider.com/', '_blank')" data-toggle="tooltip"
-                        data-placement="bottom"="">
+                        data-placement="bottom">
                         <div class="xe-comment-entry"> <a class="xe-user-img"> <img
                                     data-src="assets/images/logos/1.5.1.png" class="lozad img-circle" width="40"> </a>
                             <span class="label label-info" data-toggle="tooltip"
@@ -607,7 +606,7 @@
                 <div class="col-sm-3">
                     <div class="xe-widget xe-conversations box2 label-info"
                         onclick="window.open('https://www.forbes.com/', '_blank')" data-toggle="tooltip"
-                        data-placement="bottom"="">
+                        data-placement="bottom">
                         <div class="xe-comment-entry"> <a class="xe-user-img"> <img
                                     data-src="assets/images/logos/forbes.png" class="lozad img-circle" width="50"
                                     height="50"> </a> <span class="label label-info" data-toggle="tooltip"
