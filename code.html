@@ -23,6 +23,7 @@ parsers: # array
         - RULE-SET,BanEasyPrivacy,REJECT
         - RULE-SET,directlist,DIRECT
         - RULE-SET,proxylist,🌍
+        - RULE-SET,ProxyGFWlist,🌍
         - GEOIP,CN,DIRECT
         - MATCH,🌍
       prepend-proxy-groups:
@@ -67,6 +68,12 @@ parsers: # array
           url: "https://ghproxy.com/https://raw.githubusercontent.com/Mythologyli/ZJU-Rule/master/Clash/Providers/BanEasyPrivacy.yaml"
           interval: 86400
           path: ./ruleset/BanEasyPrivacy.yaml
+        ProxyGFWlist:
+          behavior: classical 
+          type: http
+          url: "https://ghproxy.com/https://raw.githubusercontent.com/Mythologyli/ZJU-Rule/master/Clash/Providers/ProxyGFWlist.yaml"
+          interval: 86400
+          path: ./ruleset/ProxyGFWlist.yaml
 </pre>
 
 <hr/>
